@@ -1,6 +1,6 @@
 div {
     width: 100vw;
-
+    max-height: 510px;
     color: white;
     display: flex;
     align-items: center;
