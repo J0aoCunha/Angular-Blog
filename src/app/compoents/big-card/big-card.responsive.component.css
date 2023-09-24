@@ -1,0 +1,15 @@
+@media only screen and (max-width : 820px) {
+    .container__big-card {
+        width: 500px;
+        height: 600px;
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width : 414px) {
+    .container__big-card {
+        width: 300px;
+        height: 275px;
+        margin-bottom: 150px;
+    }
+}
