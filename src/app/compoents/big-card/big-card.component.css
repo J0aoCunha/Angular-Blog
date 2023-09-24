@@ -9,9 +9,9 @@
     justify-content: flex-start;
     flex-direction: column;
 
-    -webkit-box-shadow: 6px 2px 11px 4px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 6px 2px 11px 4px rgba(255, 255, 255, 1);
-    box-shadow: 6px 2px 11px 4px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 7px 4px 20px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 7px 4px 20px 0px rgba(255, 255, 255, 1);
+    box-shadow: 7px 4px 20px 0px rgba(255, 255, 255, 1);
 }
 
 .big-card__title>h1 {
