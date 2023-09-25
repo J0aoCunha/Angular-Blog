@@ -1,11 +1,24 @@
-@media only screen and (max-width : 820px) {
+@media only screen and (max-width : 1532px) {
+    div>h1 {
+        font-size: 200px;
+    }
+}
 
+
+@media only screen and (max-width : 1024px) {
     div>h1 {
         font-size: 120px;
     }
 }
 
-@media only screen and (max-width : 414px) {
+
+@media (max-width: 768px) {
+    div>h1 {
+        font-size: 80px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
 
     div>h1 {
         font-size: 50px;
