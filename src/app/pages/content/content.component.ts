@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from 'src/app/data/dataFake';
 
 @Component({
   selector: 'app-content',
@@ -7,14 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  photoCover: string = "https://miro.medium.com/v2/resize:fit:720/0*1yo17Ov28sa7p33N"
-  contentText1: string = "We are delighted to announce that we’ve collaborated with the online interactive code learning platform Sololearn to develop an introductory course to Angular. The course is available for free on Sololearn’s platform to anyone who wants to learn Angular."
-  contentText: string = "With hands-on coding exercises and projects, learners get practical experience working with real examples of Angular code. They’ll learn the fundamentals of Angular, such as components, routing, and more."
+  photoCover: string = ""
+  contentText1: string = ""
+  contentText2: string = ""
+  private id: string | null = "0"
 
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(value =>
+      this.id = (value.get("id"))
+    )
+
+    this.setValuesToComponent(this.id)
+  }
+
+  setValuesToComponent(id: string | null) {
+
+    const result = dataFake.filter(article => article.id == id)[0]
+
+    this.contentText1 = result.Text1
+    this.contentText2 = result.Text2
+    this.photoCover = result.photoCover
   }
 
 }
